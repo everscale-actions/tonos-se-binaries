@@ -9,6 +9,8 @@ env:
 jobs:
   build-node:
     name: Build Node SE ${{ matrix.os }}
+    env:
+      PUBLISH_FOLDER: node
     strategy:
       fail-fast: false
       matrix:
@@ -53,8 +55,6 @@ jobs:
         run: cargo build --release
 
       - name: 🔨 Generate node folder
-        env:
-          PUBLISH_FOLDER: node
         run: |
           mkdir -p ${{ env.PUBLISH_FOLDER }}
           if [ -f "ton-node-se/target/release/ton_node_startup" ]; then cp ton-node-se/target/release/ton_node_startup ${{ env.PUBLISH_FOLDER }}; fi
