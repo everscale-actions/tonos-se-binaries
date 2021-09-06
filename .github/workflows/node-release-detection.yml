@@ -46,7 +46,7 @@ jobs:
           echo 'New releases: ${{ needs.check-new-releases.outputs.new-releases }}'
       - uses: actions/checkout@v2
         with:
-          token: ${{secrets.PAT}}
+          token: $${{ secrets.GITHUB_TOKEN }}
       - run: echo '${{ needs.check-new-releases.outputs.remote-releases }}' > tonos-se-releases.json
       - name: Commit tonos-se-releases.json
         run: |
