@@ -36,6 +36,7 @@ jobs:
             core.setOutput('new-releases', JSON.stringify(remoteReleases.filter(r=>!localReleases.includes(r))))
 
   push-to-local-releases:
+    environment: prod
     needs: check-new-releases
     if: ${{ needs.check-new-releases.outputs.new-releases != '[]' }}
     runs-on: ubuntu-latest
