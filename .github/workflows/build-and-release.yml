@@ -45,8 +45,9 @@ jobs:
           script: |
             var runners = ['ubuntu-18.04', 'macos-10.15', 'windows-2019'];
             var os = ['Linux', 'Windows', 'macOS'];          
-            var tonosReleases = require(`${process.env.GITHUB_WORKSPACE}/tonos-se-releases.json`)
-                                  .filter(r=>r>=process.env.TONOS_SE_MIN_VERSION);
+            var allKnownReleases = require(`${process.env.GITHUB_WORKSPACE}/tonos-se-releases.json`);
+            var indexOfMinVersion = allKnownReleases.indexOf(process.env.TONOS_SE_MIN_VERSION);
+            var tonosReleases = allKnownReleases.slice(indexOfMinVersion);
 
             var include = [];
             os.forEach(os=>{
