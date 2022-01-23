@@ -18,7 +18,7 @@ on:
 env:
   TONOS_SE_REPO_OWNER: tonlabs
   TONOS_SE_REPO_NAME: tonos-se
-  BUILD_TON_NODE_REPO: ton-actions/build-ton-node-startup  
+  BUILD_TON_NODE_REPO: everscale-actions/build-ton-node-startup  
   ARANGODB_VERSION: 3.7.9
   TON_Q_SERVER_VERSION: 0.44.0
   NGINX_VERSION: 1.19.7
