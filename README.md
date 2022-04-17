@@ -1,3 +1,10 @@
+[<img src="https://avatars3.githubusercontent.com/u/67861283?s=150&u=4536b61595a1b422604fab8a7012092d891278f6&v=4" align="right" width="150">](https://freeton.org/)
+
+# DEPRECATED
+> This project deprecated and no longer supported.
+> 
+> Please take a look at https://github.com/everscale-actions/evernode-se
+
 # tonos-se-binaries
 
 The solution prepares special application packs (releases) for running [TON OS Startup Edition without Docker](https://github.com/ton-actions/tonos-se) for different Operational Systems. The main idea for the solution is creating standardized application packs.
